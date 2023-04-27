@@ -6,15 +6,22 @@ var countSuccesJS = 0;
 function gacha() {
     var random = Math.floor(Math.random() * 100);
     if (random <= 1) {
-        boxElement.innerHTML = '<p>có:</p><br><img id="img" src="https://static.vecteezy.com/system/resources/previews/000/421/448/original/weapons-icon-vector-illustration.jpg">';
+        boxElement.innerHTML 
+        = '<p>có:</p><br><img id="img" src="https://cdn1.iconfinder.com/data/icons/operating-system-flat-1/30/linux-512.png">';
         countSuccesJS += 1;
         countSuccesElement.textContent = `Success: ${countSuccesJS}`;
     } else {
         boxElement.textContent = 'Có cái dái';
         countJS += 1;
         countElement.textContent = `Fail: ${countJS}`;
-    }   
+    }
 };
 
+function randomColor() {
+    var color1 = Math.floor(Math.random() * 255);
+    var color2 = Math.floor(Math.random() * 255);
+    var color3 = Math.floor(Math.random() * 255);
+    boxElement.style.color = `rgb(${color1}, ${color2}, ${color3})`;
+};
 
-
+// setInterval(randomColor, 1000);

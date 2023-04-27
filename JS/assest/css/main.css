@@ -7,11 +7,16 @@ body {
 }
 
 .box {
-     font-size: 5em;
+    font-size: 5em;
+    color: #3C486B;
+}
+
+.red {
+    color: #54B435;
 }
 
 #img {
-    height: 50px;
+    height: 100px;
 }
 
 .btn-wrap {
@@ -27,6 +32,8 @@ body {
     border-radius: 5px;
     background-color: #3C486B;
     color: white;
+    user-select: none;
+    cursor: pointer;
 }
 
 .count {

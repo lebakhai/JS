@@ -1,0 +1,52 @@
+#content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+}
+
+.clock-box {
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px;
+}
+
+.clock {
+    background-color: var(--box-color);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    color: var(--text-color);
+    padding: 32px;
+    gap: var(--gap-size);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.01);
+}
+
+.clock-item {
+    --size: 2em;
+    --font-size: 2em;
+    background-color: var(--sub-box-color);
+    border-radius: 12px;
+    /* overflow: hidden; */
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+    position: relative;
+}
+
+.clock-item::before {
+    content: ':';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: calc(0px - (var(--gap-size) / 1.25));
+}
+
+.clock-item:last-child::after, .clock-item:last-child::before {
+    display: none;
+}

@@ -1,0 +1,98 @@
+:root {
+    --pad-size: 18px;
+}
+
+#msg-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+
+#msg-wrap {
+    position: fixed;
+    z-index: 3;
+    top: var(--pad-size);
+    right: var(--pad-size);
+}
+
+.toast {
+    min-width: 400px;
+    max-width: 500px;
+    background-color: #ccc;
+    padding: var(--pad-size) var(--pad-size);
+    vertical-align: middle;
+    border-radius: 12px;
+    color: #edf6f9;
+    animation: toast 0.25s ease, fadeOut 1s linear 2s forwards;
+    margin-bottom: var(--pad-size);
+}
+
+.toast--success {
+    background-color: #76c893; 
+}
+
+.toast--fail {
+    background-color: #DF2E38;
+}
+
+.toast--warn {
+    background-color: #F7C04A;
+}
+
+.toast__body {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.toast__title {
+    margin-bottom: calc(var(--pad-size) / 2);
+    font-size:var(--pad-size);
+    max-width: calc(100% - var(--pad-size));
+    min-width: fit-content;
+}
+
+.toast__icon {
+    display: inline-block;
+    font-size: calc(var(--pad-size) + 2px);
+    vertical-align: middle;
+}
+
+.toast__headinng {
+    display: inline-block;
+}
+
+.toast__content {
+    font-size: calc(var(--pad-size) / 1.4);
+    max-width: calc(100% - (var(--pad-size) * 3.5));
+}
+
+.toast__close {
+    position: absolute;
+    display: inline-block;
+    right: var(--pad-size);
+    /* top: px; */
+    font-size: var(--pad-size);
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    color: #F99B7D;
+}
+
+
+.btn {
+    padding: 12px;
+    border-radius: 12px;
+    margin: 12px;
+    color: #edf6f9;
+    cursor: pointer;
+    user-select: none;
+}
+.btn.btn--success {
+    background-color: #76c893;
+}
+.btn.btn--fail {
+    background-color: #DF2E38;
+}

@@ -36,9 +36,8 @@ simpleElement.onclick = (e) => {
     }
 }
 
-
-btn.onclick = (e) => {
-if (!isHex) {
+function runHandler() {
+    if (!isHex) {
         var color = getRandomSimpleColor(simpleColor);
         subContentElement.style.background = color;
         colorElement.textContent = color;
@@ -46,5 +45,15 @@ if (!isHex) {
         var color = getRandomHexColor(hexColor);
         subContentElement.style.background = color;
         colorElement.textContent = color;
+    }
+}
+
+btn.onclick = (e) => {
+    runHandler()
+}
+
+document.documentElement.onkeydown = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+        runHandler();
     }
 }

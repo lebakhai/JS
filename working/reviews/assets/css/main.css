@@ -10,8 +10,11 @@ body {
     text-align: center;
     width: 100vw;
     min-height: 100vh;
-    justify-content: space-evenly;
-    gap: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 
 .card {
@@ -20,6 +23,24 @@ body {
     border-radius: 12px;
     text-align: center;
     overflow: hidden;
+}
+
+.card:first-child, .card:last-child {
+    opacity: 0.3;
+    max-width: 250px;
+    user-select: none;
+}
+
+.card-1 {
+    animation: card1SlideLeft 0.25s ease;
+}
+
+.card-2 {
+    animation: card2SlideLeft 0.25s ease;
+}
+
+.card-3 {
+    animation: card3SlideLeft 0.25s ease;
 }
 
 .info {

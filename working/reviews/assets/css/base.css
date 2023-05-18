@@ -25,3 +25,61 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+@media (max-width: 700px) {
+    .content {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card.card-1 , .card.card-3 {
+        display: none !important;
+    }
+}
+
+@keyframes card1SlideRight {
+    100% {
+        opacity: 1;
+        max-width: 300px;
+        user-select: unset;
+        transform: translateX(calc(100vw / 3));
+    }
+}
+
+@keyframes card1SlideLeft {
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes card3SlideRight {
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes card3SlideLeft {
+    100% {
+        opacity: 1;
+        max-width: 300px;
+        user-select: unset;
+        transform: translateX(calc(-100vw / 3));
+    }
+}
+
+@keyframes card2SlideRight {
+    100% {
+        opacity: 0.3;
+        max-width: 250px;
+        user-select: none;
+        transform: translateX(calc(100vw / 3));
+    }
+}
+
+@keyframes card2SlideLeft {
+    100% {
+        opacity: 0.3;
+        max-width: 250px;
+        user-select: none;
+        transform: translateX(calc(-100vw / 3));
+    }
+}

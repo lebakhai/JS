@@ -1,0 +1,74 @@
+body {
+    background-color: var(--background-color);
+}
+
+#content {
+    min-height: 100vh;
+}
+
+.content {
+    text-align: center;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+.card {
+    max-width: 300px;
+    background-color: var(--box-color);
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.info {
+    height: 100%;
+}
+
+.avatar {
+    flex-basis: 100%;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.avatar .img {
+    width: 100%;
+}
+
+.personal-info {
+    margin: 12px 0;
+    padding: 0 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.personal-info .name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.personal-info .job {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.dsc {
+    margin-top: 12px;
+    padding: 0 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.control {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 36px;
+    padding: 32px;
+    font-size: 24px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}

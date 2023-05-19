@@ -40,7 +40,6 @@
     100% {
         opacity: 1;
         max-width: 300px;
-        user-select: unset;
         transform: translateX(calc(100vw / 3));
     }
 }
@@ -61,7 +60,6 @@
     100% {
         opacity: 1;
         max-width: 300px;
-        user-select: unset;
         transform: translateX(calc(-100vw / 3));
     }
 }
@@ -70,7 +68,6 @@
     100% {
         opacity: 0.3;
         max-width: 250px;
-        user-select: none;
         transform: translateX(calc(100vw / 3));
     }
 }
@@ -79,7 +76,6 @@
     100% {
         opacity: 0.3;
         max-width: 250px;
-        user-select: none;
         transform: translateX(calc(-100vw / 3));
     }
 }

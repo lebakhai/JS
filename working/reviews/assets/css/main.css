@@ -31,7 +31,7 @@ body {
     user-select: none;
 }
 
-.card-1 {
+/* .card-1 {
     animation: card1SlideLeft 0.25s ease;
 }
 
@@ -41,7 +41,7 @@ body {
 
 .card-3 {
     animation: card3SlideLeft 0.25s ease;
-}
+} */
 
 .info {
     height: 100%;

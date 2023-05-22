@@ -57,7 +57,8 @@ function loadCurrentCards(duration) {
         cards[2].querySelector('.personal-info .job').textContent = usersData[nextIndex].job;
 
         cards[0].querySelector('.dsc').textContent = usersData[prevIndex].description;
-
+        cards[1].querySelector('.dsc').textContent = usersData[currentIndex].description;
+        cards[2].querySelector('.dsc').textContent = usersData[nextIndex].description;
     }, duration);
 };
 
@@ -122,7 +123,10 @@ function loopAnimation(method = 'Right' ,duration = 250, pos = 13) {
 
 // Start handler
 function start() {
+    if (!apiData) {
+        
+    };
     loadCurrentCards();
 };
 
-setTimeout(start, 250);
+setTimeout(start, 300);

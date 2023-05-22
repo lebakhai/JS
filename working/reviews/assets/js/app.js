@@ -126,8 +126,8 @@ function loader() {
     loaderElement.style.display = 'flex';
     var intervalLoader = setInterval(() => {
         if (apiData) {
-            start();
             clearInterval(intervalLoader);
+            start();
         }
     },1)
 };

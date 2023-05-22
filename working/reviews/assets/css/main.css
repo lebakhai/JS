@@ -25,6 +25,10 @@ body {
     overflow: hidden;
 }
 
+.card-2 {
+    min-height: 440px;
+}
+
 .card:first-child, .card:last-child {
     opacity: 0.3;
     max-width: 250px;

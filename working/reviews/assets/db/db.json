@@ -70,5 +70,6 @@
       "description": "An auto mechanic with 15 years experience working on all vehicle types.",
       "image": "https://images.unsplash.com/photo-1499823196937-8a4597f6f307?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTY4NDQyMDQyMHw&ixlib=rb-4.0.3&q=85&w=1920"
     }
-  ]
+  ],
+  "currentIndex": 0
 }

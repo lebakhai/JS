@@ -31,18 +31,6 @@ body {
     user-select: none;
 }
 
-/* .card-1 {
-    animation: card1SlideLeft 0.25s ease;
-}
-
-.card-2 {
-    animation: card2SlideLeft 0.25s ease;
-}
-
-.card-3 {
-    animation: card3SlideLeft 0.25s ease;
-} */
-
 .info {
     height: 100%;
 }
@@ -55,6 +43,8 @@ body {
 
 .avatar .img {
     width: 100%;
+    max-height: 200px;
+    object-fit: cover;
 }
 
 .personal-info {
@@ -67,6 +57,7 @@ body {
 .personal-info .name {
     font-size: 24px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .personal-info .job {

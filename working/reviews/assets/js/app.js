@@ -75,7 +75,18 @@ function cardAnimation(dimension = Left, duration = 250) {
     });
 };
 
-prevBtn.onclick = (e) => {
+function leftMove() {
+    cardAnimation('Left', 250);
+    if (currentIndex <  usersData.length - 2) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+
+    loadCurrentCards(250)
+}
+
+function rightMove() {
     cardAnimation('Right', 250);
     if (currentIndex > 0) {
         currentIndex--;
@@ -85,15 +96,12 @@ prevBtn.onclick = (e) => {
     loadCurrentCards(250);
 }
 
-nextBtn.onclick = (e) => {
-    cardAnimation('Left', 250);
-    if (currentIndex <  usersData.length - 2) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
-    }
+prevBtn.onclick = (e) => {
+    rightMove();
+}
 
-    loadCurrentCards(250)
+nextBtn.onclick = (e) => {
+    leftMove();
 }
 
 randomBtn.onclick = (e) => {
@@ -106,6 +114,17 @@ randomBtn.onclick = (e) => {
     currentIndex = Math.floor(Math.random() * usersData.length);
     loadCurrentCards();
 };
+
+document.documentElement.onkeydown = (e) => {
+    switch (e.keyCode) {
+        case 39:
+        leftMove();
+            break;
+        case 37:
+        rightMove();
+            break;
+    }
+}
 
 function loopAnimation(method = 'Right' ,duration = 250, pos = 13) {
     var i = 0;

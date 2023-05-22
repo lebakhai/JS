@@ -79,3 +79,9 @@
         transform: translateX(calc(-100vw / 3));
     }
 }
+
+@keyframes loader {
+    100% {
+        transform: rotate(260deg);
+    }
+}

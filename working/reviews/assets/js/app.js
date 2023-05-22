@@ -6,6 +6,7 @@ var prevBtn = $('.card-main .prev.btn');
 var randomBtn = $('.card-main .random.btn');
 var nextBtn = $('.card-main .next.btn');
 var cards = Array.from($$('.card'));
+var loaderElement = $('.loader');
 var apiData;
 var usersData;
 var currentIndex;
@@ -113,10 +114,22 @@ function loopAnimation(method = 'Right' ,duration = 250, pos = 13) {
             clearInterval(loopAni);
         } else {
             cardAnimation(method, duration);
-            console.log(i);
+            // console.log(i);
         }
         i++;
     }, duration + 25);
+};
+
+
+// Loader function
+function loader() {
+    loaderElement.style.display = 'flex';
+    var intervalLoader = setInterval(() => {
+        if (apiData) {
+            start();
+            clearInterval(intervalLoader);
+        }
+    },1)
 };
 
 
@@ -124,9 +137,11 @@ function loopAnimation(method = 'Right' ,duration = 250, pos = 13) {
 // Start handler
 function start() {
     if (!apiData) {
-        
-    };
+        loader();
+    } else {
+        loaderElement.style.display = 'none';
+    }
     loadCurrentCards();
 };
 
-setTimeout(start, 300);
+start();

@@ -1,18 +1,11 @@
-import html from './core.js';
+import html from './core.js'
 
-const animals = [
-    'cat',
-    'dog',
-    'memay',
-    'tiger',
-];
-
-const isSuccess = true;
+const games = ['Minecraft', 'LOL', 'Valorant', 'Stardew Valley'];
 
 const output = html`
-    <h1>${0}</h1>
-    <ul> 
-        ${animals.map((animal, index) => {return `<li>${animal}</li>`}).join('')}
+    <h1>${false}</h1>
+    <ul>
+        ${games.map(game => `<li>${game}</li>`).join('\n        ')} 
     </ul>
 `;
 

@@ -1,12 +1,4 @@
-import html from './core.js'
+import { attach } from "./store.js";
+import app from "./component/app.js";
 
-const games = ['Minecraft', 'LOL', 'Valorant', 'Stardew Valley'];
-
-const output = html`
-    <h1>${false}</h1>
-    <ul>
-        ${games.map(game => `<li>${game}</li>`).join('\n        ')} 
-    </ul>
-`;
-
-console.log(output);
+attach(app, document.querySelector('#app'));

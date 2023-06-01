@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     transition: 0.25s;
     color: var(--text-color);
-    font-family: 'Roboto', sans-serif;  
+    font-family: 'r0c0i Linotte';  
 }
 
 :root {
@@ -19,4 +17,8 @@
     --placeholder-color: #6c6c6c;
     --dsc-color: #777;
     --input-color: #b6b3ae;
+}
+
+body {
+    background-color: var(--background-color);
 }

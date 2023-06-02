@@ -22,3 +22,15 @@
 body {
     background-color: var(--background-color);
 }
+
+.btn {
+    background-color: var(--primary-color);
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 3px #bbb;
+}
+
+.btn:hover {
+    background-color: var(--box-color);
+}

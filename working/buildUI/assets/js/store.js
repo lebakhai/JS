@@ -7,5 +7,5 @@ window.dispatch = dispatch;
 
 export {
     attach,
-    connect
+    connect,
 }

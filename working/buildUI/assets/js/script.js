@@ -1,4 +1,7 @@
-import { attach } from "./store.js";
+import {attach} from "./store.js";
 import app from "./component/app.js";
 
-attach(app, document.querySelector('#app'));
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+attach(app, $('#app'));

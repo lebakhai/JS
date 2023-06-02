@@ -1,19 +1,17 @@
 const init = {
-    games: ['Minecraft', 'LOL', 'Valorant', 'Stardew Valley'],
-    cars: ['BWM', 'Porches']
+    animals: ['cat', 'dog', 'tiger', 'bird', 'fish', 'matis', 'isopod'],
 }
 
-export default function reducer(state = init, action, args) {
+export default function reducer(state = init, action, ...args) {
     switch (action) {
         case "ADD":
-            const newGame = args;
+            const newValues = args;
             return {
                 ...state,
-                games: [...state.games, newGame]
-            };
-            break;
+                animals: [...state.animals, newValues]
+            }
         default:
             return state;
             break;
-        }
+    }
 }

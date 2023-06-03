@@ -7,6 +7,34 @@
 .calc-display {
     padding-top: 175px;
     border-radius: 12px;
+    position: relative;
+}
+
+.calc-operation {
+    --pad-size: 24px;
+    position: absolute;
+    /* bottom: var(--pad-size); */
+    bottom: 0;
+    right: var(--pad-size);
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    height: 90%;
+}
+
+.calc-operation-item {
+    flex-basis: 100%;
+}
+
+.calc-operator {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.calc-result {
+    font-size: 48px;
 }
 
 .calc-button-wrap {
@@ -42,5 +70,5 @@
 }
 
 .calc-icon.dot {
-    font-size: 5px;
+    font-size: 6px;
 }

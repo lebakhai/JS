@@ -32,7 +32,7 @@
     margin: 0;
     transition: 0.25s;
     color: var(--text-color);
-    font-family: 'r0c0i Linotte';
+    font-family: 'linotte';
     font-weight: bold;
 }
 
@@ -48,19 +48,35 @@
     --input-color: #b6b3ae;
 }
 
+html {
+}
+
 body {
     /* background-color: var(--background-color); */
     background-color: #f0eff0;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .color-sp1 {
     color: var(--special-color);
 }
 
-.color-sp2 {
+.color-sp2, .operator {
     color: var(--error-color);
+}
+
+@media screen and (max-width: 400px) {
+    .calc {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-height: 768px) {
+    .calc {
+        transform: scale(0.8);
+    }
 }

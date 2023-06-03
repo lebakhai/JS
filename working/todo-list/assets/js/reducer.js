@@ -50,7 +50,12 @@ const actions = {
     },
     endEdit(state, title) {
         if (state.editIndex !== null) {
-            state.todos[state.editIndex].title = title;
+            if(title) {
+                state.todos[state.editIndex].title = title;
+            } else {
+                state.todos.splice(state.editIndex, 1);    
+            }
+            
             state.editIndex = null;
             storage.set(state.todos);
         }

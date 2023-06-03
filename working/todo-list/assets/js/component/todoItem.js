@@ -18,7 +18,7 @@ function todoItem({ todo, index, editIndex }) {
         <button class="destroy" onclick="dispatch('destroy', ${index})"></button>
       </div>
       <input class="edit" value="${todo.title}" 
-      onkeyup="event.keyCode === 13 && dispatch('endEdit', this.value.trim())"
+      onkeyup="event.keyCode === 13 && dispatch('endEdit', this.value.trim()) || event.keyCode === 27 && dispatch('endEdit', '${todo.title}')"
       onblur="dispatch('endEdit', this.value.trim())"
       />
     </li>

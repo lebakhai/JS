@@ -1,4 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@font-face {
+    font-family: linotte;
+    src: url(../fonts/Linotte\ Regular.ttf);
+}
+
+@font-face {
+    font-family: linotte;
+    src: url(../fonts/Linotte\ Light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: linotte;
+    src: url(../fonts/Linotte\ Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: linotte;
+    src: url(../fonts/Linotte\ Semi\ Bold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: linotte;
+    src: url(../fonts/Linotte\ Heavy.ttf);
+    font-weight: 800;
+}
 
 * {
     box-sizing: border-box;
@@ -6,7 +33,7 @@
     margin: 0;
     transition: 0.25s;
     color: var(--text-color);
-    font-family: 'Roboto', sans-serif;  
+    font-family: 'r0c0i Linotte';  
 }
 
 :root {

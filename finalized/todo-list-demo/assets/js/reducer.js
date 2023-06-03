@@ -55,7 +55,7 @@ const actions = {
             } else {
                 state.todos.splice(state.editIndex, 1);    
             }
-            
+
             state.editIndex = null;
             storage.set(state.todos);
         }

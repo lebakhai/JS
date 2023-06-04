@@ -8,4 +8,4 @@ github repo direction: https://github.com/lebakhai/JS/tree/main/final/Color_flip
 github pages: https://lebakhai.github.io/JS/final/Color_flipper/
 
 
-![Screen Shot 2023-06-04 at 13 23 25](https://github.com/lebakhai/JS/assets/97871575/0cca1c49-e460-4fac-b6d7-25b1ea3e559d)
+![Screen Shot 2023-06-04 at 13 28 50](https://github.com/lebakhai/JS/assets/97871575/8b8a6239-0d35-4ff1-a1a2-004252bc4947)

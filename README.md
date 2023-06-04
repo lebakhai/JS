@@ -17,5 +17,11 @@ github pages: https://lebakhai.github.io/JS/final/counter/
 
 ![Screen Shot 2023-06-04 at 13 31 59](https://github.com/lebakhai/JS/assets/97871575/baa7ed80-06f5-4407-9649-899f0b2eab9b)
 
+## Todo list demo
+
+github repo direction: https://github.com/lebakhai/JS/tree/main/final/todo-list-demo/ <br>
+github pages: https://lebakhai.github.io/JS/final/todo-list-demo/
+
+![Screen Shot 2023-06-04 at 13 34 28](https://github.com/lebakhai/JS/assets/97871575/3d3bda8d-3479-4162-be60-14735aa8e741)
 
 

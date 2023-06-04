@@ -20,7 +20,7 @@ github pages: https://lebakhai.github.io/JS/final/counter/
 ## Todo list demo
 
 github repo direction: https://github.com/lebakhai/JS/tree/main/final/todo-list-demo/ <br>
-github pages: https://lebakhai.github.io/JS/final/todo-list-demo/
+github pages: https://lebakhai.github.io/JS/final/todo-list-demo/ <br>
 Template github repository: https://github.com/Klerith/TODO-CSS-Template
 
 ![Screen Shot 2023-06-04 at 13 34 28](https://github.com/lebakhai/JS/assets/97871575/3d3bda8d-3479-4162-be60-14735aa8e741)

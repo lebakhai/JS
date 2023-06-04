@@ -6,8 +6,8 @@ export default function html([first, ...strings], ...values) {
     ,[first])
 }
 
-export function createStore(reduce) {
-    let state = reduce();
+export function createStore(reducer) {
+    let state = reducer();
     const roots = new Map();
 
     function render() {

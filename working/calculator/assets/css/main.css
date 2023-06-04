@@ -34,8 +34,16 @@
 }
 
 .calc-operator {
-    font-size: 24px;
+    font-size: 28px;
     vertical-align: middle;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    letter-spacing: 4px;
+}
+
+.calc-operator .operator .icon {
+    font-size: 18px;
 }
 
 .calc-result {

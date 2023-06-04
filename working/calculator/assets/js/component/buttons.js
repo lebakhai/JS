@@ -36,7 +36,7 @@ function buttons() {
     <div class="calc-button button">
         <i class="fa-solid icon dot calc-icon fa-circle"></i>
     </div>
-    <div class="calc-button button color-sp2">
+    <div class="calc-button button color-sp2" onclick="dispatch('endEdit', $('.calc-operation.editing .calc-result').textContent.trim())">
         <i class="fa-solid icon calc-icon fa-equals"></i>
     </div>
 </div>

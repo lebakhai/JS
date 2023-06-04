@@ -2,6 +2,7 @@ import html from "../core.js";
 import { connect } from "../store.js";
 import { operatorHtml } from "../core.js";
 
+
 function display({ isEditing, calcData }) {
   return html`
     <div
@@ -11,11 +12,21 @@ function display({ isEditing, calcData }) {
       $('.calc-result').value = ${calcData.result};\"`}
     >
       <div class="calc-operation ${isEditing && "editing"}">
-        <div class="calc-operator calc-operation-item">
+        ${calcData.operators[0].length > 0 
+        &&
+        calcData.operators[1].length > 0 
+        && `<div class="calc-operator calc-operation-item">
         ${operatorHtml(calcData.operators)}
-        </div>
+        </div>`}
         <div class='calc-result calc-operation-item' 
-        ${isEditing && "contenteditable"}>
+        ${isEditing && "contenteditable"}
+        onkeydown="
+        switch(event.keyCode) {
+          case 13:
+            dispatch('endEdit', this.textContent.trim())
+            break;
+        }"
+        >
         ${calcData && calcData.result}
         </div>
         </div>

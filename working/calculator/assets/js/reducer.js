@@ -12,6 +12,7 @@ const actions = {
     editMode(state) {
         state.isEditing = true;
         state.calcData.operators = [[], []]
+        storage.set(state.calcData.operators, state.calcData.result)
     },
 
 } 

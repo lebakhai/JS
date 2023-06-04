@@ -6,6 +6,14 @@ export default function html([first, ...strings], ...values) {
         .join('')
 }
 
+export function operatorHtml([[firstNumber, ...numbers], [...operators]]) {
+    return operators.reduce((acc, curr) =>
+        acc.concat(curr, numbers.shift())
+    , [firstNumber])
+    .filter(x => x && x !== true || x === 0)
+    .join('')
+}
+
 export function createStore(reducer) {
     let state = reducer();
     const roots = new Map();

@@ -11,7 +11,9 @@ const actions = {
     },
     editMode(state) {
         state.isEditing = true;
-    }
+        state.calcData.operators = [[], []]
+    },
+
 } 
 
 export default function reducer(state = init, action, args) {

@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     align-content: space-evenly;
     height: 100%;
-    max-width: 100%;
+    width: calc(100% - (var(--padding-size) * 2));
 }
 
 .calc-operation-item {
@@ -48,11 +48,21 @@
     border: none;
     background-color: var(--box-color);
     padding: 32px;
+    min-width: 100%;
+    height: calc(100% - (var(--padding-size) * 2));
     text-align: right;
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .calc-operation.editing .calc-result:focus {
     outline: none;
+}
+
+.calc-operation.editing .calc-result img {
+    border-radius: 12px;
+    margin: 0 3px;
 }
 
 .calc-button-wrap {

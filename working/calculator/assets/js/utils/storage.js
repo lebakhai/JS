@@ -1,4 +1,4 @@
-const CALC_STORAGE_KEY = "Calc";
+const CALC_STORAGE_KEY = "CALC";
 
 export default {
     get() {
@@ -8,9 +8,9 @@ export default {
         }
     },
     set(operators, result) {
-        localStorage.setItem(CALC_STORAGE_KEY, {
+        localStorage.setItem(CALC_STORAGE_KEY, JSON.stringify({
             operators,
             result,
-        })
+        }))
     }
 }

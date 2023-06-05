@@ -17,13 +17,11 @@ export function operatorHtml([[firstNumber, ...numbers], [...operators]]) {
             })
         }
         
+        const cloneNumbers = [...numbers];
         function operatorSolver() {
-            const cloneNumbers = [...numbers]; // mảng rỗng
-            const number = Number(cloneNumbers[0]);
-            console.log('number: ', number)
+            const number = Number(cloneNumbers.shift());
             return operators.reduce((acc, curr) => {
-                console.log('acc: ', acc);
-                console.log('curr: ', curr);
+
                 switch(curr) {
                     case "*":
                         return acc * number;
@@ -51,6 +49,8 @@ export function operatorHtml([[firstNumber, ...numbers], [...operators]]) {
     }
     } else {
         var output = [firstNumber, ...numbers].join('');
-        return {operatorHtml: output};
+        return {operatorHtml: output,
+        result: output,
+        };
     }
 }

@@ -23,7 +23,7 @@ const actions = {
       state.calcData.result = operatorHtml(state.calcData.operators).result;
     } else {
       state.calcData.operators = [value, []];
-      state.calcData.result = value;
+      state.calcData.result = value.join('');
     }
 
     storage.set(state.calcData.operators, state.calcData.result);

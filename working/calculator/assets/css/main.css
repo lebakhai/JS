@@ -48,10 +48,12 @@
 
 .calc-result {
     font-size: 48px;
+    max-width: calc(100% - (var(--padding-size) * 2));
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .calc-operation.editing .calc-result {
-    max-width: calc(100% - (var(--padding-size) * 2));
     border-radius: 12px;
     border: none;
     background-color: var(--box-color);

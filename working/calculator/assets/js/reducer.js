@@ -7,7 +7,6 @@ const init = {
 };
 
 const actions = {
-  saveBoth(state, args) {},
   editMode(state) {
     state.isEditing = true;
     state.calcData.operators = [[], []];
@@ -18,16 +17,23 @@ const actions = {
     if (/[/*+-]/.test(value)) {
       state.calcData.operators = [
         value.join().split(/[/*+-]/),
-        value.join().replace(/\d/g, ""),
+        value.join('').replace(/\d/g, "").split(''),
       ];
       state.calcData.result = operatorHtml(state.calcData.operators).result;
     } else {
       state.calcData.operators = [value, []];
-      state.calcData.result = value.join('');
+      state.calcData.result = value.join("");
     }
 
     storage.set(state.calcData.operators, state.calcData.result);
     state.isEditing = false;
+  },
+  exitEdit(state) {
+    state.isEditing = false;
+  },
+  addValue(state) {
+    this.editMode(state);
+
   },
 };
 

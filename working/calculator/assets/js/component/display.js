@@ -25,6 +25,8 @@ function display({ isEditing, calcData }) {
           case 13:
             dispatch('endEdit', this.textContent.trim())
             break;
+          case 27:
+            dispatch('exitEdit')
         }"
         >
         ${calcData && calcData.result}
@@ -35,5 +37,3 @@ function display({ isEditing, calcData }) {
     }
 
     export default connect()(display);
-
-    // 4 <span class="operator">+</span> 9

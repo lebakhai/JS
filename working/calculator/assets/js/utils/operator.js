@@ -18,7 +18,7 @@ export function operatorHtml([[firstNumber, ...numbers], [...operators]]) {
         }
         
         function operatorSolver() {
-            const cloneNumbers = [...numbers];
+            const cloneNumbers = [...numbers]; // mảng rỗng
             const number = Number(cloneNumbers[0]);
             console.log('number: ', number)
             return operators.reduce((acc, curr) => {

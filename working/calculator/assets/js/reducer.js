@@ -1,4 +1,5 @@
 import storage from "./utils/storage.js";
+import { operatorHtml } from "./utils/operator.js";
 
 const init = {
   calcData: storage.get(),
@@ -6,21 +7,26 @@ const init = {
 };
 
 const actions = {
-  saveBoth(state, args) {
-  },
+  saveBoth(state, args) {},
   editMode(state) {
     state.isEditing = true;
     state.calcData.operators = [[], []];
     storage.set(state.calcData.operators, state.calcData.result);
   },
-  endEdit(state, value) {
-    state.calcData.operators = [
-        /[/*+-]/.test(value) ? value.split(/[/*+-]/) : value, 
-        /[/*+-]/.test(value) ? value.replace(/\d/g, "") : [],
-    ];
+  endEdit(state, args) {
+    const value = args.slice();
+    if (/[/*+-]/.test(value)) {
+      state.calcData.operators = [
+        value.join().split(/[/*+-]/),
+        value.join().replace(/\d/g, ""),
+      ];
+      state.calcData.result = operatorHtml(state.calcData.operators).result;
+    } else {
+      state.calcData.operators = [value, []];
+      state.calcData.result = value;
+    }
 
-    /[/*+-]/.test(value) ? undefined : state.calcData.result = value;
-
+    storage.set(state.calcData.operators, state.calcData.result);
     state.isEditing = false;
   },
 };

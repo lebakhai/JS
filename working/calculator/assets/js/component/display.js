@@ -1,6 +1,6 @@
 import html from "../core.js";
 import { connect } from "../store.js";
-import { operatorHtml } from "../core.js";
+import { operatorHtml } from "../utils/operator.js";
 
 
 function display({ isEditing, calcData }) {
@@ -16,7 +16,7 @@ function display({ isEditing, calcData }) {
         &&
         calcData.operators[1].length > 0 
         && `<div class="calc-operator calc-operation-item">
-        ${operatorHtml(calcData.operators)}
+        ${operatorHtml(calcData.operators).operatorHtml}
         </div>`}
         <div class='calc-result calc-operation-item' 
         ${isEditing && "contenteditable"}

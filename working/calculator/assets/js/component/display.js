@@ -9,7 +9,7 @@ function display({ isEditing, calcData }) {
       class="calc-display"
       ${!isEditing &&
       `onclick=\"dispatch('editMode');
-      $('.calc-result').value = ${calcData.result};\"`}
+      $('.calc-result').value = \`${calcData.result}\`;\"`}
     >
       <div class="calc-operation ${isEditing && "editing"}">
         ${calcData.operators[0].length > 0 

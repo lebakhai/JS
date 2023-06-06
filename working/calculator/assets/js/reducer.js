@@ -13,18 +13,15 @@ const actions = {
     storage.set(state.calcData.operators, state.calcData.result);
   },
   endEdit(state, args) {
-    const value = args.slice();
-    if (/[/*+-]/.test(value)) {
-      state.calcData.operators = [
-        value.join().split(/[/*+-]/),
-        value.join('').replace(/\d/g, "").split(''),
-      ];
-      state.calcData.result = operatorHtml(state.calcData.operators).result;
-    } else {
-      state.calcData.operators = [value, []];
-      state.calcData.result = value.join("");
-    }
-
+    const value = args[0]; 
+  
+    const regex = /[/*+-]/g;
+    const numbers = value.split(regex);
+    const operators = value.match(regex);
+  
+    state.calcData.operators = [numbers, operators || []];
+    state.calcData.result = operatorHtml(state.calcData.operators).result;
+  
     storage.set(state.calcData.operators, state.calcData.result);
     state.isEditing = false;
   },

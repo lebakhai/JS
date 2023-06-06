@@ -19,24 +19,36 @@ export function operatorHtml([[firstNumber, ...numbers], [...operators]]) {
         
         const cloneNumbers = [...numbers];
         function operatorSolver() {
-            const number = Number(cloneNumbers.shift());
-            return operators.reduce((acc, curr) => {
-
-                switch(curr) {
-                    case "*":
-                        return acc * number;
-                    case "+":
-                        return acc + number;
-                    case "-":
-                        return acc - number;
-                    case "/":
-                        return acc / number;
-                    default:
-                        console.log('bug!')
-                        return acc;
-                }
-            }, Number(firstNumber))
-        }
+            let result = Number(firstNumber);
+            let currentOperatorIndex = 0;
+          
+            for (let i = 0; i < cloneNumbers.length; i++) {
+              const number = Number(cloneNumbers[i]);
+              const operator = operators[currentOperatorIndex];
+          
+              switch (operator) {
+                case "*":
+                  result *= number;
+                  break;
+                case "+":
+                  result += number;
+                  break;
+                case "-":
+                  result -= number;
+                  break;
+                case "/":
+                  result /= number;
+                  break;
+                default:
+                  console.log("bug!");
+                  return result;
+              }
+          
+              currentOperatorIndex++;
+            }
+          
+            return result;
+          }
 
         const operatorIcons = convertOperatorToIcon();
         

@@ -28,7 +28,7 @@ export function operatorHtml([[firstNumber, ...numbers], [...operators]]) {
               switch (operator) {
                 case "*":
                   result *= number;
-                  break;
+                  break;    
                 case "+":
                   result += number;
                   break;
